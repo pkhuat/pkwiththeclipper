@@ -3,6 +3,8 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
+  "homepage": "https://pkwiththeclipper.me",
+
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -24,10 +26,10 @@
     "eslint": "^8.56.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.5",
-    "gh-pages": "^6.1.1",
+    "gh-pages": "^6.3.0",
     "globals": "^13.24.0",
     "postcss": "^8.4.32",
     "tailwindcss": "^3.3.0",
-    "vite": "^5.0.8"
+    "vite": "^6.3.5"
   }
 }
