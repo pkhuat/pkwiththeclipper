@@ -4,7 +4,6 @@
   "version": "0.0.0",
   "type": "module",
   "homepage": "https://pkwiththeclipper.me",
-
   "scripts": {
     "dev": "vite",
     "build": "vite build",
@@ -14,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "framer-motion": "^12.16.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
