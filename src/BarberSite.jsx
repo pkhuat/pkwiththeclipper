@@ -4,6 +4,11 @@ import { useState } from 'react';
 
 export default function BarberSite() {
   const [booking, setBooking] = useState({ name: '', date: '', service: '' });
+
+  const handleBooking = () => {
+    alert('Appointment booked!');
+    setBooking({ name: '', date: '', service: '' });
+  };
   const products = [
     { name: 'FreshFade Shampoo', price: '$15' },
     { name: 'ClipperGuard Spray', price: '$12' },
@@ -26,10 +31,32 @@ export default function BarberSite() {
         <section id="booking">
           <h2 className="text-2xl font-semibold mb-6">Schedule Your Cut</h2>
           <div className="bg-white shadow-md p-8 rounded-2xl space-y-5">
-            <input className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Your Name" onChange={e => setBooking({ ...booking, name: e.target.value })} />
-            <input className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" type="date" onChange={e => setBooking({ ...booking, date: e.target.value })} />
-            <input className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400" placeholder="Service (Fade, Beard Trim, etc)" onChange={e => setBooking({ ...booking, service: e.target.value })} />
-            <button onClick={() => alert("Appointment booked!")} className="bg-black text-white py-2 px-6 rounded-md hover:bg-gray-800 transition">Book Now</button>
+            <input
+              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Your Name"
+              value={booking.name}
+              onChange={(e) => setBooking({ ...booking, name: e.target.value })}
+            />
+            <input
+              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              type="date"
+              value={booking.date}
+              onChange={(e) => setBooking({ ...booking, date: e.target.value })}
+            />
+            <input
+              className="w-full p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-400"
+              placeholder="Service (Fade, Beard Trim, etc)"
+              value={booking.service}
+              onChange={(e) =>
+                setBooking({ ...booking, service: e.target.value })
+              }
+            />
+            <button
+              onClick={handleBooking}
+              className="bg-black text-white py-2 px-6 rounded-md hover:bg-gray-800 transition"
+            >
+              Book Now
+            </button>
           </div>
         </section>
 
